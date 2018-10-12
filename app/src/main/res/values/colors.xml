@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#424242</color>
+    <color name="colorPrimaryDark">#1B1B1B</color>
+    <color name="colorAccent">#B59700</color>
+
+    <color name="garageColorOne">#129B0A</color>
+    <color name="garageColorTwo">#248A09</color>
+    <color name="garageColorThree">#367A09</color>
+    <color name="garageColorFour">#476908</color>
+    <color name="garageColorFive">#595808</color>
+    <color name="garageColorSix">#6B4807</color>
+    <color name="garageColorSeven">#7D3707</color>
+    <color name="garageColorEight">#8E2606</color>
+    <color name="garageColorNine">#A01606</color>
+    <color name="garageColorTen">#B20505</color>
+</resources>

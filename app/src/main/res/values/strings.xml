@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">UCF Parking</string>
+    <string name="garage_spaces_available">%1$d/%2$d</string>
+    <string name="garage_empty_percentage" formatted="false">0%</string>
+    <string name="garage_percent_full">%d%%</string>
+    <string name="error_no_internet">No internet connection</string>
+    <string name="error_loading_html">An unexpected error occurred</string>
+    <string name="action_retry">RETRY</string>
+    <string name="error_occured">An error occurred</string>
+</resources>
