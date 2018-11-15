@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/swipeRefreshLayout"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/contentContainer"
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -16,16 +27,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <ProgressBar
-            android:visibility="visible"
-            android:layout_centerInParent="true"
-            android:id="@+id/loadingProgress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </RelativeLayout>
+            <ProgressBar
+                android:id="@+id/loadingProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
 
+        </RelativeLayout>
 
+    </android.support.v4.widget.SwipeRefreshLayout>
 
-
-</android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
