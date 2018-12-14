@@ -5,6 +5,13 @@ import android.os.Parcelable
 
 data class Garage(val name: String, var spacesAvailable: Int, val maxSpaces: Int) : Parcelable {
 
+    init {
+        // Sometimes the website returns 1857 / 1852 for example
+        if (spacesAvailable > maxSpaces) {
+            spacesAvailable = maxSpaces
+        }
+    }
+
     val percentFull = Math.round((maxSpaces - spacesAvailable).toDouble() / maxSpaces * 100)
 
     val spacesFilled = maxSpaces - spacesAvailable
