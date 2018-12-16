@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-            val color ="#BDB000"
-            val toolbarTitle = "<font color='$color'>UCF</font><font color='#000'>Parking</font>"
+            val ucfColor ="#BDB000"
+            val toolbarTitle = "<font color='$ucfColor'>UCF</font><font color='#000'>Parking</font>"
 
             toolbar.title = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 Html.fromHtml(toolbarTitle, Html.FROM_HTML_MODE_LEGACY)
