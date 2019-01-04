@@ -14,4 +14,6 @@
     <color name="garageColorEight">#8E2606</color>
     <color name="garageColorNine">#A01606</color>
     <color name="garageColorTen">#B20505</color>
+
+    <color name="UCFColor">#AFA900</color>
 </resources>

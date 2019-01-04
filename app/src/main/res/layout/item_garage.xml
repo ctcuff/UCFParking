@@ -31,7 +31,6 @@
                 android:layout_height="16dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="16dp"
-                app:rcProgressColor="#B20505"
                 app:rcRadius="8dp" />
 
             <TextView

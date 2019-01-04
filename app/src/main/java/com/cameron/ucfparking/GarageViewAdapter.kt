@@ -12,7 +12,9 @@ import java.util.*
 class GarageViewAdapter(private var garages: ArrayList<Garage>) : RecyclerView.Adapter<GarageViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_garage, parent, false)
+        val view = LayoutInflater
+                .from(parent.context)
+                .inflate(R.layout.item_garage, parent, false)
         return ViewHolder(view)
     }
 
@@ -21,19 +23,22 @@ class GarageViewAdapter(private var garages: ArrayList<Garage>) : RecyclerView.A
 
         with(holder.itemView) {
             tvGarageName.text = garage.name
+
             tvSpacesAvailable.text = context.getString(
                     R.string.garage_spaces_available,
                     garage.spacesAvailable, garage.maxSpaces
             )
-            tvPercentFull.text =
-                    if (garage.percentFull < 0) {
-                        context.getString(R.string.garage_empty_percentage)
-                    } else {
-                        context.getString(R.string.garage_percent_full, garage.percentFull)
-                    }
-            garageProgressBar.max = garage.maxSpaces.toFloat()
-            garageProgressBar.progress = garage.spacesFilled.toFloat()
-            garageProgressBar.progressColor = getProgressColor(context, garage.percentFull)
+
+            tvPercentFull.text = context.getString(
+                    R.string.garage_percent_full,
+                    garage.percentFull
+            )
+
+            garageProgressBar.apply {
+                max = garage.maxSpaces.toFloat()
+                progress = garage.spacesFilled.toFloat()
+                progressColor = getProgressColor(context, garage.percentFull)
+            }
         }
     }
 
